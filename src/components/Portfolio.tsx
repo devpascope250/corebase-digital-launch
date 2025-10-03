@@ -51,10 +51,16 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className="group hover:shadow-hover transition-smooth border-border bg-card cursor-pointer animate-fade-in"
+              className="group hover:shadow-hover hover:scale-105 transition-all duration-300 border-border bg-card cursor-pointer animate-fade-in relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader>
+              {/* Animated gradient border effect */}
+              <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+              
+              {/* Animated corner accent */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-hero opacity-0 group-hover:opacity-20 transition-all duration-300 transform translate-x-10 -translate-y-10 group-hover:translate-x-0 group-hover:translate-y-0 rounded-bl-full" />
+              
+              <CardHeader className="relative z-10">
                 <CardTitle className="text-xl font-heading group-hover:text-primary transition-smooth">
                   {project.title}
                 </CardTitle>
@@ -62,13 +68,13 @@ const Portfolio = () => {
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative z-10">
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
                     <Badge 
                       key={tagIndex} 
                       variant="secondary"
-                      className="text-xs"
+                      className="text-xs hover:bg-primary hover:text-primary-foreground transition-smooth"
                     >
                       {tag}
                     </Badge>

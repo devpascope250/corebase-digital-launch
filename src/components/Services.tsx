@@ -36,16 +36,21 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="group hover:shadow-hover transition-smooth border-border bg-card cursor-pointer animate-fade-in"
+              className="group hover:shadow-hover hover:-translate-y-2 transition-all duration-300 border-border bg-card cursor-pointer animate-fade-in relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader className="text-center">
-                <div className="mx-auto mb-4 w-16 h-16 rounded-xl bg-gradient-hero flex items-center justify-center group-hover:scale-110 transition-smooth">
+              {/* Animated background gradient on hover */}
+              <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+              
+              <CardHeader className="text-center relative z-10">
+                <div className="mx-auto mb-4 w-16 h-16 rounded-xl bg-gradient-hero flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-card">
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl font-heading">{service.title}</CardTitle>
+                <CardTitle className="text-2xl font-heading group-hover:text-primary transition-smooth">
+                  {service.title}
+                </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative z-10">
                 <CardDescription className="text-center text-base leading-relaxed">
                   {service.description}
                 </CardDescription>
