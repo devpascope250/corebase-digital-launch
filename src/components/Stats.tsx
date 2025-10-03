@@ -34,12 +34,15 @@ const Stats = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-gradient-hero relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 px-4 bg-foreground relative overflow-hidden">
       {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
       </div>
+
+      {/* Gradient overlay for better contrast */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-secondary/20" />
 
       <div className="container mx-auto relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -97,17 +100,17 @@ const StatCard = ({
 
   return (
     <div
-      className="text-center text-white animate-fade-in"
+      className="text-center animate-fade-in bg-card/50 backdrop-blur-sm rounded-xl p-6 hover:bg-card/70 transition-all hover:scale-105 shadow-card border border-border/50"
       style={{ animationDelay: `${delay}s` }}
     >
-      <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm">
-        <Icon className="h-8 w-8" />
+      <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-hero shadow-lg">
+        <Icon className="h-8 w-8 text-white" />
       </div>
-      <div className="text-5xl font-bold font-heading mb-2">
+      <div className="text-5xl font-bold font-heading mb-2 text-foreground">
         {count}
         {suffix}
       </div>
-      <div className="text-lg text-white/90">{label}</div>
+      <div className="text-lg text-muted-foreground font-medium">{label}</div>
     </div>
   );
 };

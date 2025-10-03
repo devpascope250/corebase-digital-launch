@@ -39,16 +39,15 @@ const Hero = () => {
             <Button 
               size="lg" 
               onClick={() => scrollToSection('contact')}
-              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-6 text-lg group"
+              className="bg-white text-primary hover:bg-white/90 hover:scale-105 font-semibold px-8 py-6 text-lg group shadow-lg"
             >
               Get Started
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
             </Button>
             <Button 
-              size="lg" 
-              variant="outline"
+              size="lg"
               onClick={() => scrollToSection('contact')}
-              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-6 text-lg"
+              className="bg-white/20 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 font-semibold px-8 py-6 text-lg shadow-lg transition-all"
             >
               Contact Us
             </Button>
