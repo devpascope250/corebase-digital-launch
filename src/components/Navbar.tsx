@@ -56,13 +56,21 @@ const Navbar = ({ isTransparent = false, scrollToSection }: NavbarProps) => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0 cursor-pointer" onClick={() => navigate('/')}>
-            <span
+            {/* <span
               className={`text-2xl font-bold transition-colors duration-300 ${
                 isScrolled ? "text-primary" : "text-white"
               }`}
             >
               CoreBase
-            </span>
+            </span> */}
+
+            <img
+    src={isScrolled ? "/coreBase-t.png"  : "/corebase-w-version.png" } // ← change to your actual file path
+    alt="CoreBase Limited Logo"
+    className={`transition-all duration-300 ${
+      isScrolled ? 'brightness-100' : 'brightness-125'
+    } h-12 md:h-14 w-auto object-contain`}
+  />
           </div>
 
           {/* Desktop Navigation */}
