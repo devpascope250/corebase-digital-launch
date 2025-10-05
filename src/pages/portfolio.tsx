@@ -20,6 +20,7 @@ import {
   Filter,
   X
 } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const projects = [
   {
@@ -416,7 +417,7 @@ const PortfolioPage = () => {
                   size="lg"
                   variant="outline"
                   onClick={() => scrollToSection('contact')}
-                  className="border-white text-white hover:bg-white/10 px-8 py-3 text-lg"
+                  className="border-white text-white bg-white/10 px-8 py-3 text-lg"
                 >
                   View Case Studies
                 </Button>
@@ -424,6 +425,8 @@ const PortfolioPage = () => {
             </motion.div>
           </div>
         </section>
+
+        <Footer/>
       </main>
 
       {/* Project Modal */}

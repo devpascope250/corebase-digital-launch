@@ -19,6 +19,7 @@ import {
   Terminal
 } from "lucide-react";
 import InteractiveDemo from "@/components/InteractiveDemo";
+import Footer from "@/components/Footer";
 
 const techCategories = [
   {
@@ -340,6 +341,7 @@ const TechStackPage = () => {
           </div>
         </section>
         <InteractiveDemo/>
+        <Footer/>
       </main>
     </div>
   );

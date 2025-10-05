@@ -19,6 +19,7 @@ import {
   Lightbulb,
   Zap
 } from "lucide-react";
+import Footer from "@/components/Footer";
 
 // Team data
 const teamMembers = [
@@ -100,15 +101,6 @@ const values = [
   }
 ];
 
-// Milestones
-const milestones = [
-  { year: "2015", event: "Company Founded", description: "Started with a vision to deliver exceptional software solutions" },
-  { year: "2017", event: "First Enterprise Client", description: "Secured our first Fortune 500 client partnership" },
-  { year: "2019", event: "Team Expansion", description: "Grew to 15+ expert developers and designers" },
-  { year: "2021", event: "Global Recognition", description: "Awarded 'Top Development Agency' by TechReview" },
-  { year: "2023", event: "150+ Projects", description: "Successfully delivered 150+ projects worldwide" },
-  { year: "2024", event: "AI Integration", description: "Integrated AI capabilities into our service offerings" }
-];
 
 const technologies = [
   "React", "Node.js", "TypeScript", "Flutter", 
@@ -464,6 +456,8 @@ const AboutPage = () => {
           </div>
         </section>
       </main>
+
+      <Footer/>
     </div>
   );
 };
