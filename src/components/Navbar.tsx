@@ -65,7 +65,7 @@ const Navbar = ({ isTransparent = false, scrollToSection }: NavbarProps) => {
             </span> */}
 
             <img
-    src={isScrolled ? "/coreBase-t.png"  : "/corebase-w-version.png" } // ← change to your actual file path
+    src={isScrolled ? "/coreBase-t.webp"  : "/corebase-w-version.webp" } // ← change to your actual file path
     alt="CoreBase Limited Logo"
     className={`transition-all duration-300 ${
       isScrolled ? 'brightness-100' : 'brightness-125'
